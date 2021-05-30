@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block body %}
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('{{url_for('static',filename='assets/img/home-bg.jpg')}}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Admin Pannel</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <h4 class="text-center">Add/Edit post</h4>
+            <a href="/admin"><button class="btn btn-primary">Back to Dashboard</button></a>
+            <form action="/edit/{{post.sno}}" method="POST">
+                <div class="form-floating">
+                    <input class="form-control" id="title" name = "title" type="text" placeholder="Enter title of post" value="{{post.title}}" />
+                    <label for="title">Title</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="subheading" name = "subheading" type="taxt" placeholder="Enter subheading" value="{{post.subheading}}"/>
+                    <label for="subheading">Sub-Heading</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="slug" name = "slug" type="text" placeholder="Enter slug" value="{{post.slug}}"/>
+                    <label for="slug">Slug</label>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" id="content" name = "content" placeholder="Enter your content" style="height: 12rem">{{post.content}}</textarea>
+                    <label for="content">Content</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="img" name = "img" type="text" placeholder="Image file" value="{{post.img_file}}"/>
+                    <label for="img">Image-file</label>
+                </div>
+                <br />
+                <button class="btn btn-primary text-uppercase" type="submit">Submit</button>
+            </form>
+        </div>
+        
+{% endblock %}

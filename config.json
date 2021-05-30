@@ -1,0 +1,15 @@
+{
+    "params":
+    {
+        "local_server":"True",
+        "local_uri":"mysql+mysqlconnector://root:@localhost/pythonblog",
+        "prod_uri":"mysql+mysqlconnector://root:@localhost/pythonblog",
+        "fb_url":"https://facebok.com",
+        "tw_url":"https://twitter.com",
+        "gh_url":"https://github.com",
+        "blog_name":"PythonBlog",
+        "admin_username":"admin",
+        "admin_password":"admin123",
+        "Upload_Location":"D:\\python\\python-flask\\static\\assets\\img"
+    }
+}
